@@ -1,21 +1,69 @@
-body{
+ul , ol {
+    list-style: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
     margin: 0;
 }
-#xxx{
-    background: green;
+#xxx {
+    background: #fff;
     display: block;
 }
-.actions{
+.actions {
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
+    padding: 20px;
 }
-.actions > #brush{
-    display: none;
+.actions svg {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 10px;
+    transition: all 0.3s;
 }
-.actions.x > #brush{
-    display: inline-block;
+.actions svg.active {
+    fill: pink;
+    transform: scale(1.2);
 }
-.actions.x > #eraser{
-    display: none;
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+ .colors {
+     position: fixed;
+     top: 52px;
+     left: 25px;
+ }
+ .colors > li {
+    box-shadow: 0 0 3px rgba(0,0,0,0.25);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 10px 0;
+    transition: all 0.3s;
+ }
+ .colors > li.black {
+     background-color: #000;
+ }
+ .colors > li.red {
+     background-color: red;
+ }
+ .colors > li.green {
+     background-color: green;
+ }
+ .colors > li.blue {
+     background-color: blue;
+ }
+ .colors > li.yellow {
+     background-color: yellow;
+ }
+.colors > li.active {
+    box-shadow: 0 0 3px rgba(0,0,0,0.95);
+    transform: scale(1.2); 
 }
+ 

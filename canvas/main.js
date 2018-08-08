@@ -7,17 +7,62 @@ listenToUser(yyy)
 var eraserEnabled = false
 eraser.onclick = function(){
     eraserEnabled = true
-    actions.className = 'actions x'
+    eraser.classList.add('active')
+    pen.classList.remove('active')
 }
-brush.onclick = function(){
+pen.onclick = function(){
     eraserEnabled = false
-    actions.className = 'actions'
+    pen.classList.add('active')
+    eraser.classList.remove('active')
 }
-
+black.onclick = function(){
+    context.fillStyle = 'black'
+    context.strokeStyle = 'black'
+    black.classList.add('active')
+    red.classList.remove('active')
+    green.classList.remove('active')
+    blue.classList.remove('active')
+    yellow.classList.remove('active')
+}
+red.onclick = function(){
+    context.fillStyle = 'red'
+    context.strokeStyle = 'red'
+    red.classList.add('active')
+    black.classList.remove('active')
+    green.classList.remove('active')
+    blue.classList.remove('active')
+    yellow.classList.remove('active')
+}
+green.onclick = function(){
+    context.fillStyle = 'green'
+    context.strokeStyle = 'green'
+    green.classList.add('active')
+    black.classList.remove('active')
+    red.classList.remove('active')
+    blue.classList.remove('active')
+    yellow.classList.remove('active')
+}
+blue.onclick = function(){
+    context.fillStyle = 'blue'
+    context.strokeStyle = 'blue'
+    blue.classList.add('active')
+    black.classList.remove('active')
+    green.classList.remove('active')
+    red.classList.remove('active')
+    yellow.classList.remove('active')
+}
+yellow.onclick = function(){
+    context.fillStyle = 'yellow'
+    context.strokeStyle = 'yellow'
+    yellow.classList.add('active')
+    black.classList.remove('active')
+    green.classList.remove('active')
+    blue.classList.remove('active')
+    red.classList.remove('active')
+}
 /*****工具函数****/
 function drawCircle(x,y,radius){
     context.beginPath()
-    context.fillStyle = 'black'
     context.arc(x,y,radius,0,Math.PI*2)
     context.fill()
 }
@@ -25,7 +70,6 @@ function drawLine(x1,y1,x2,y2){
     context.beginPath()
     context.moveTo(x1,y1)
     context.lineWidth = 5
-    context.strokeStyle = 'black'
     context.lineTo(x2,y2)
     context.stroke()
     context.closePath()
