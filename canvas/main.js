@@ -1,5 +1,6 @@
 var yyy = document.getElementById('xxx')
 var context = yyy.getContext('2d')
+var lineWidth = 5
 
 autoSetCanvasSize(yyy)
 listenToUser(yyy)
@@ -60,6 +61,24 @@ yellow.onclick = function(){
     blue.classList.remove('active')
     red.classList.remove('active')
 }
+thin.onclick = function(){
+    lineWidth = 1
+    thin.classList.add('active')
+    medium.classList.remove('active')
+    thick.classList.remove('active')
+}
+medium.onclick = function(){
+    lineWidth = 5
+    thin.classList.remove('active')
+    medium.classList.add('active')
+    thick.classList.remove('active')
+}
+thick.onclick = function(){
+    lineWidth = 8
+    thin.classList.remove('active')
+    medium.classList.remove('active')
+    thick.classList.add('active')
+}
 /*****工具函数****/
 function drawCircle(x,y,radius){
     context.beginPath()
@@ -69,7 +88,7 @@ function drawCircle(x,y,radius){
 function drawLine(x1,y1,x2,y2){
     context.beginPath()
     context.moveTo(x1,y1)
-    context.lineWidth = 5
+    context.lineWidth = lineWidth
     context.lineTo(x2,y2)
     context.stroke()
     context.closePath()

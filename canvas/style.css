@@ -66,4 +66,31 @@ body {
     box-shadow: 0 0 3px rgba(0,0,0,0.95);
     transform: scale(1.2); 
 }
- 
+.sizes {
+    position: fixed;
+    right: 10px;
+    top: 13px;
+}
+.sizes > li {
+    margin: 15px;
+    border-radius: 25%;
+}
+.sizes > .thin {
+    height: 0;
+    width: 25px;
+    border-top: 1px solid black;
+}
+.sizes > .medium {
+    height: 0;
+    width: 25px;
+    border-top: 3px solid black;
+}
+.sizes > .thick {
+    height: 0;
+    width: 25px;
+    border-top: 6px solid black;
+}
+.sizes > li.active {
+    border-top-color: pink;
+    transform: scale(1.2);
+}
