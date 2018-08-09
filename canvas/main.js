@@ -79,6 +79,17 @@ thick.onclick = function(){
     medium.classList.remove('active')
     thick.classList.add('active')
 }
+clear.onclick = function(){
+    context.clearRect(0,0,yyy.width,yyy.height)
+}
+download.onclick = function(){
+    var url = yyy.toDataURL("image/png")
+    var a = document.createElement('a')
+    document.body.appendChild(a)
+    a.href = url
+    a.download = 'my picture'
+    a.click()
+}
 /*****工具函数****/
 function drawCircle(x,y,radius){
     context.beginPath()
