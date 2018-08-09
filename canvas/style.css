@@ -6,11 +6,14 @@ ul , ol {
     padding: 0;
 }
 body {
-    overflow: hidden;
+    overflow: auto;
 }
 #xxx {
     background: #fff;
     display: block;
+    /* position: fixed;  /* 相当于屏幕固定，为了解决手机canvas滑动 */
+    /* top: 0;
+    left: 0; */ 
 }
 .actions {
     position: fixed;
